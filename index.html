@@ -125,6 +125,10 @@
       height: 100%;
       object-fit: cover;
       pointer-events: none;
+      /* Safari video loading fixes */
+      preload: metadata;
+      -webkit-playsinline: true;
+      playsinline: true;
     }
     .thumbnail-overlay {
       position: absolute;
@@ -221,7 +225,7 @@
             </div>
 
             <div class="column has-text-centered">
-              <video controls>
+              <video controls preload="metadata" playsinline>
                 <source src="assets/video_crop.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -258,42 +262,42 @@
         <div class="carousel-container">
           <div class="carousel-wrapper" id="carousel-wrapper">
             <div class="carousel-slide">
-              <video controls>
+              <video controls preload="metadata" playsinline>
                 <source src="assets/output_enga_louder4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <p class="video-caption">(a) English audio</p>
             </div>
             <div class="carousel-slide">
-              <video controls>
+              <video controls preload="metadata" playsinline>
                 <source src="assets/npc_6s.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <p class="video-caption">(b) In-the-wild audio</p>
             </div>
             <div class="carousel-slide">
-              <video controls>
+              <video controls preload="metadata" playsinline>
                 <source src="assets/output_obama.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <p class="video-caption">(c) In-the-wild audio</p>
             </div>
             <div class="carousel-slide">
-              <video controls>
+              <video controls preload="metadata" playsinline>
                 <source src="assets/output_hindi.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <p class="video-caption">(d) Hindi audio</p>
             </div>
             <div class="carousel-slide">
-              <video controls>
+              <video controls preload="metadata" playsinline>
                 <source src="assets/output_german.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <p class="video-caption">(e) German audio</p>
             </div>
             <div class="carousel-slide">
-              <video controls>
+              <video controls preload="metadata" playsinline>
                 <source src="assets/output_grid.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -309,37 +313,37 @@
         </div>
         <div class="carousel-indicators">
           <div class="carousel-indicator active" onclick="goToSlide(0)">
-            <video class="thumbnail-video" muted>
+            <video class="thumbnail-video" muted preload="metadata" playsinline>
               <source src="assets/output_enga_louder4.mp4" type="video/mp4">
             </video>
             <div class="thumbnail-overlay">(a) English</div>
           </div>
           <div class="carousel-indicator" onclick="goToSlide(1)">
-            <video class="thumbnail-video" muted>
+            <video class="thumbnail-video" muted preload="metadata" playsinline>
               <source src="assets/npc_6s.mp4" type="video/mp4">
             </video>
             <div class="thumbnail-overlay">(b) In-the-wild</div>
           </div>
           <div class="carousel-indicator" onclick="goToSlide(2)">
-            <video class="thumbnail-video" muted>
+            <video class="thumbnail-video" muted preload="metadata" playsinline>
               <source src="assets/output_obama.mp4" type="video/mp4">
             </video>
             <div class="thumbnail-overlay">(c) In-the-wild</div>
           </div>
           <div class="carousel-indicator" onclick="goToSlide(3)">
-            <video class="thumbnail-video" muted>
+            <video class="thumbnail-video" muted preload="metadata" playsinline>
               <source src="assets/output_hindi.mp4" type="video/mp4">
             </video>
             <div class="thumbnail-overlay">(d) Hindi</div>
           </div>
           <div class="carousel-indicator" onclick="goToSlide(4)">
-            <video class="thumbnail-video" muted>
+            <video class="thumbnail-video" muted preload="metadata" playsinline>
               <source src="assets/output_german.mp4" type="video/mp4">
             </video>
             <div class="thumbnail-overlay">(e) German</div>
           </div>
           <div class="carousel-indicator" onclick="goToSlide(5)">
-            <video class="thumbnail-video" muted>
+            <video class="thumbnail-video" muted preload="metadata" playsinline>
               <source src="assets/output_grid.mp4" type="video/mp4">
             </video>
             <div class="thumbnail-overlay">(f) Japanese</div>
@@ -357,35 +361,35 @@
           <div class="carousel-container">
             <div class="carousel-wrapper" id="uhap-carousel-wrapper">
               <div class="carousel-slide">
-                <video controls>
+                <video controls preload="metadata" playsinline>
                   <source src="assets/personalization_wpg.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
                 <p class="video-caption">intro</p>
               </div>
               <div class="carousel-slide">
-                <video controls>
+                <video controls preload="metadata" playsinline>
                   <source src="assets/ava.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
                 <p class="video-caption">Ava-256</p>
               </div>
               <div class="carousel-slide">
-                <video controls>
+                <video controls preload="metadata" playsinline>
                   <source src="assets/renderme.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
                 <p class="video-caption">Renderme-360</p>
               </div>
               <div class="carousel-slide">
-                <video controls>
+                <video controls preload="metadata" playsinline>
                   <source src="assets/hq3d.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
                 <p class="video-caption">HQ3DAvatar</p>
               </div>
               <div class="carousel-slide">
-                <video controls>
+                <video controls preload="metadata" playsinline>
                   <source src="assets/phone_drive.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
@@ -401,31 +405,31 @@
           </div>
           <div class="carousel-indicators">
             <div class="uhap-carousel-indicator active" onclick="uhapGoToSlide(0)">
-              <video class="thumbnail-video" muted>
+              <video class="thumbnail-video" muted preload="metadata" playsinline>
                 <source src="assets/personalization_wpg.mp4" type="video/mp4">
               </video>
               <div class="thumbnail-overlay">intro</div>
             </div>
             <div class="uhap-carousel-indicator" onclick="uhapGoToSlide(1)">
-              <video class="thumbnail-video" muted>
+              <video class="thumbnail-video" muted preload="metadata" playsinline>
                 <source src="assets/ava.mp4" type="video/mp4">
               </video>
               <div class="thumbnail-overlay">Ava-256</div>
             </div>
             <div class="uhap-carousel-indicator" onclick="uhapGoToSlide(2)">
-              <video class="thumbnail-video" muted>
+              <video class="thumbnail-video" muted preload="metadata" playsinline>
                 <source src="assets/renderme.mp4" type="video/mp4">
               </video>
               <div class="thumbnail-overlay">Renderme-360</div>
             </div>
             <div class="uhap-carousel-indicator" onclick="uhapGoToSlide(3)">
-              <video class="thumbnail-video" muted>
+              <video class="thumbnail-video" muted preload="metadata" playsinline>
                 <source src="assets/hq3d.mp4" type="video/mp4">
               </video>
               <div class="thumbnail-overlay">HQ3DAvatar</div>
             </div>
             <div class="uhap-carousel-indicator" onclick="uhapGoToSlide(4)">
-              <video class="thumbnail-video" muted>
+              <video class="thumbnail-video" muted preload="metadata" playsinline>
                 <source src="assets/phone_drive.mp4" type="video/mp4">
               </video>
               <div class="thumbnail-overlay">Phone capture</div>
@@ -444,7 +448,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h2 class="title is-3" style="margin-bottom: 2rem;">Monocular Video-Driven Animation</h2>
-          <video controls style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
+          <video controls preload="metadata" playsinline style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);">
             <source src="assets/image_driven.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
