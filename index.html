@@ -198,6 +198,34 @@
     /* Ensure section headings and subtitle are bright enough on dark bg */
     .title.is-3 { color: #f3f4f6 !important; }
     .subtitle.is-4 { color: #e5e7eb !important; }
+    /* Citation section styling - force override everything */
+    .citation-box {
+      background-color: #2a2a2a !important;
+      background: #2a2a2a !important;
+      padding: 2rem !important;
+      border-radius: 8px !important;
+      text-align: left !important;
+      margin: 0 auto !important;
+      max-width: 800px !important;
+      border: 1px solid #444 !important;
+    }
+    .citation-text {
+      color: #f8f8f2 !important;
+      background: transparent !important;
+      background-color: transparent !important;
+      font-family: 'Courier New', monospace !important;
+      font-size: 0.95rem !important;
+      margin: 0 !important;
+      white-space: pre-wrap !important;
+      line-height: 1.4 !important;
+    }
+    /* Override any body/section defaults that might interfere */
+    .citation-section {
+      background: #0e0f13 !important;
+    }
+    .citation-section * {
+      color: #f8f8f2 !important;
+    }
   </style>
 </head>
 <body>
@@ -460,13 +488,13 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section citation-section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h2 class="title is-3" style="margin-bottom: 2rem;">Citation</h2>
-          <div style="background: #2a2a2a; padding: 2rem; border-radius: 8px; text-align: left; margin: 0 auto; max-width: 800px; border: 1px solid #444;">
-            <pre style="color: #f8f8f2; font-family: 'Courier New', monospace; font-size: 0.95rem; margin: 0; white-space: pre-wrap; line-height: 1.4;">@misc{teotia2025audiodrivenuniversalgaussianhead,
+          <h2 class="title is-3" style="margin-bottom: 2rem; color: #f3f4f6 !important;">Citation</h2>
+          <div class="citation-box">
+            <pre class="citation-text">@misc{teotia2025audiodrivenuniversalgaussianhead,
       title={Audio-Driven Universal Gaussian Head Avatars}, 
       author={Kartik Teotia and Helge Rhodin and Mohit Mendiratta and Hyeongwoo Kim and Marc Habermann and Christian Theobalt},
       year={2025},
